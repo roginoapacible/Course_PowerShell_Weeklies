@@ -46,7 +46,15 @@ function Show-menu
             {
                 Write-Host "`nShowing winrm config"
                 Write-Host "`nwinrm get winrm/config"
+                Start-Process winrm
+                winrm quickconfig                
+                winrm get winrm/config | out-file -FilePath C:\winrm_config.txt
                 winrm get winrm/config
+                Write-Host "Saving output to C:\winrm_config.txt"
+                Start-Sleep -Seconds 1.5
+                Write-Host "Saved"
+                explorer.exe C:\winrm_config.txt
+                Stop-Service WinRM
             }
             '5'
             {
