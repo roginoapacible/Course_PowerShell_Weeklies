@@ -64,3 +64,9 @@ Get-Service WinRM
 
 Start-Sleep -Seconds 1.5
 Stop-Service WinRM
+
+$ExecutionContext.SessionState.LanguageMode
+
+(Get-PSSessionConfiguration -Name Test).LanguageMode
+
+powershell.exe -version 2
