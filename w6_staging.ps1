@@ -70,3 +70,7 @@ $ExecutionContext.SessionState.LanguageMode
 (Get-PSSessionConfiguration -Name Test).LanguageMode
 
 powershell.exe -version 2
+
+Clear-Host
+Get-ExecutionPolicy -List
+set-executionpolicy -ExecutionPolicy RemoteSigned -Scope Process
