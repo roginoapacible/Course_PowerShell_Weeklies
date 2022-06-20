@@ -1,4 +1,4 @@
-<#run execution policy first
+d<#run execution policy first
 set-executionpolicy -ExecutionPolicy RemoteSigned
 #run as admin ise
 Start-Process powershell_ise -Verb runAs
